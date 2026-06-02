@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmishtha Homoeo Clinic | 24/7 Homeopathy Clinic Indore</title>
+    <meta name="description" content="Premium 24/7 homeopathic medical clinic in Bhawarkua, Indore. Safe, effective, and personalized natural healing for all chronic and lifestyle disorders.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        teal: { 50: '#f0fdfa', 100: '#ccfbf1', 600: '#0d9488', 700: '#0f766e', 900: '#134e4a' },
+                        emerald: { 500: '#10b981', 600: '#059669' },
+                        gold: { 500: '#f59e0b', 600: '#d97706' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Smooth Custom Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glassmorphism {
+            background: rgba(15, 23, 42, 0.85);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased font-sans">
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/910000000000" target="_blank" class="bg-emerald-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center" title="WhatsApp Consultation">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+        </a>
+    </div>
+    <div class="fixed bottom-6 left-6 z-50 md:hidden">
+        <a href="tel:+910000000000" class="bg-teal-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center" title="Call Clinic">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+        </a>
+    </div>
+
+    <nav class="sticky top-0 z-40 w-full glassmorphism border-b border-slate-200/50 dark:border-slate-700/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-2">
+                    <div class="bg-teal-600 p-2 rounded-lg text-white">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-teal-900 dark:text-white block leading-tight">Dharmishtha</span>
+                        <span class="text-xs text-emerald-600 dark:text-emerald-400 tracking-widest uppercase font-semibold">Homoeo Clinic</span>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                    <a href="#home" class="hover:text-teal-600 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-teal-600 transition-colors">About Us</a>
+                    <a href="#treatments" class="hover:text-teal-600 transition-colors">Treatments</a>
+                    <a href="#why-choose-us" class="hover:text-teal-600 transition-colors">Why Choose Us</a>
+                    <a href="#gallery" class="hover:text-teal-600 transition-colors">Gallery</a>
+                    <a href="#contact" class="hover:text-teal-600 transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                        <i data-lucide="moon" id="theme-icon-dark" class="w-5 h-5 hidden"></i>
+                        <i data-lucide="sun" id="theme-icon-light" class="w-5 h-5"></i>
+                    </button>
+                    <a href="#booking" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:shadow-lg transition-all text-sm">Book Appointment</a>
+                </div>
+
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button id="mobile-theme-toggle" class="p-2 text-slate-500 dark:text-slate-400 rounded-full">
+                        <i data-lucide="moon" id="mobile-theme-icon" class="w-5 h-5"></i>
+                    </button>
+                    <button id="menu-btn" class="p-2 text-slate-700 dark:text-slate-200">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 pt-2 pb-6 space-y-3 font-medium shadow-xl">
+            <a href="#home" class="block py-2 hover:text-teal-600">Home</a>
+            <a href="#about" class="block py-2 hover:text-teal-600">About Us</a>
+            <a href="#treatments" class="block py-2 hover:text-teal-600">Treatments</a>
+            <a href="#why-choose-us" class="block py-2 hover:text-teal-600">Why Choose Us</a>
+            <a href="#gallery" class="block py-2 hover:text-teal-600">Gallery</a>
+            <a href="#contact" class="block py-2 hover:text-teal-600">Contact</a>
+            <a href="#booking" class="block text-center bg-teal-600 text-white py-3 rounded-xl shadow-md">Book Appointment</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative overflow-hidden pt-10 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-br from-teal-50 via-white to-emerald-50 dark:from-slate-900 dark:via-slate-900 dark:to-teal-950/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left animate-fade-in-up">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-300">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 24×7 Emergency Support & Care
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                        Natural Healing <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Through Homeopathy</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                        Providing safe, effective, and completely personalized homeopathic medical treatments for individuals and patients of all age groups.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#booking" class="bg-teal-600 hover:bg-teal-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg transition-all text-center">Book Appointment</a>
+                        <a href="tel:+910000000000" class="border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium px-8 py-4 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-teal-600 to-emerald-400 opacity-20 absolute blur-2xl"></div>
+                    <div class="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-white dark:bg-slate-800 p-4">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Doctor Consultation" class="rounded-2xl w-full h-80 object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <div class="p-3 rounded-xl bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                    <div><h4 class="font-bold text-sm">Open 24 Hours</h4><p class="text-xs text-slate-500">Continuous Support</p></div>
+                </div>
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <div class="p-3 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <div><h4 class="font-bold text-sm">Experienced Doctor</h4><p class="text-xs text-slate-500">Expert Supervision</p></div>
+                </div>
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <div class="p-3 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400"><i data-lucide="fingerprint" class="w-6 h-6"></i></div>
+                    <div><h4 class="font-bold text-sm">Personalized Care</h4><p class="text-xs text-slate-500">Tailored Case Analysis</p></div>
+                </div>
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <div class="p-3 rounded-xl bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400"><i data-lucide="smile" class="w-6 h-6"></i></div>
+                    <div><h4 class="font-bold text-sm">Patient Centered</h4><p class="text-xs text-slate-500">Holistic Recovery</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=400&q=80" alt="Clinic Interior" class="rounded-2xl h-64 w-full object-cover shadow-md mt-6">
+                <img src="https://raw.githubusercontent.com/omt8861/localrepo/refs/heads/main/Screenshot%202026-06-02%20135039.png" alt="Homeopathic Doctor" class="rounded-2xl h-64 w-full object-cover shadow-md">
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">About Dharmishtha Homoeo Clinic</h2>
+                <div class="h-1 w-20 bg-teal-600 rounded"></div>
+                <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Dharmishtha Homoeo Clinic is dedicated to providing holistic, high-quality, and completely individualized homeopathic care. We focus precisely on investigating and eliminating the deep root causes of chronic and acute conditions rather than merely suppressing superficial symptoms, thereby assisting patients in achieving systemic health and long-term vitality.
+                </p>
+                <blockquote class="border-l-4 border-teal-600 pl-4 italic text-slate-700 dark:text-slate-400 font-medium">
+                    "Dedicated to providing compassionate, safe, and profoundly effective homeopathic care to restore your health naturally."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="treatments" class="py-20 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Specialized Homeopathic Treatments</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Providing proven solutions for deep-rooted acute and chronic health complications.</p>
+                <div class="h-1 w-20 bg-teal-600 rounded mx-auto"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="shield-alert" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Allergy Treatment</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Long-term relief from respiratory and environmental seasonal sensitivities.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="sparkles" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Skin Diseases</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Effective healing configurations for chronic eczema, psoriasis, and severe acne flareups.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="scissors" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Hair Fall Treatment</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Controls systemic hair fall, dandruff, and pattern thinning at the root.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="brain" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Migraine & Headache</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Reduces frequency and intensity of recurring neural throbbing attacks naturally.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="activity" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Digestive Disorders</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Holistic recovery tracking for chronic acidity, IBS, and metabolic indigestion issues.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="wind" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Respiratory Problems</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Therapy options for chronic asthma, bronchitis, and persisting cough congestions.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="baby" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Child Healthcare</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Gentle, sweet pills providing safe immunity upgrades for pediatric problems.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group border border-slate-100 dark:border-slate-700">
+                    <div class="p-3 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 w-fit rounded-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors"><i data-lucide="venus" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Women's Health</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Treatment workflows maps balancing PCOD, thyroid disruptions, and cycle balances.</p>
+                    <a href="#booking" class="text-xs font-bold text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4 mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Why Choose Our Clinic?</h2>
+            <div class="h-1 w-20 bg-teal-600 rounded mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex gap-4">
+                <div class="text-emerald-500"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                <div><h3 class="font-bold text-lg mb-1">Natural & Safe</h3><p class="text-sm text-slate-500 dark:text-slate-400">100% natural medical minerals cleanly selected.</p></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex gap-4">
+                <div class="text-emerald-500"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                <div><h3 class="font-bold text-lg mb-1">No Side Effects</h3><p class="text-sm text-slate-500 dark:text-slate-400">Completely non-toxic systems ideal for infants to seniors.</p></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex gap-4">
+                <div class="text-emerald-500"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                <div><h3 class="font-bold text-lg mb-1">Individualized Case Analysis</h3><p class="text-sm text-slate-500 dark:text-slate-400">Deep study matching physical, mental & structural profiles.</p></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex gap-4">
+                <div class="text-emerald-500"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                <div><h3 class="font-bold text-lg mb-1">Affordable Healthcare</h3><p class="text-sm text-slate-500 dark:text-slate-400">Economical long-term recovery plans without financial stress.</p></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex gap-4">
+                <div class="text-emerald-500"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                <div><h3 class="font-bold text-lg mb-1">Long-Term Relief</h3><p class="text-sm text-slate-500 dark:text-slate-400">Focuses on permanent systemic root eradication over simple patches.</p></div>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex gap-4">
+                <div class="text-emerald-500"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                <div><h3 class="font-bold text-lg mb-1">24×7 Availability</h3><p class="text-sm text-slate-500 dark:text-slate-400">Ready medical emergency consulting open inside Bhawarkua.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Clinic Gallery</h2>
+                <div class="h-1 w-20 bg-teal-600 rounded mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-2xl shadow-sm border border-white dark:border-slate-800 h-64 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80" alt="Consultation Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-sm border border-white dark:border-slate-800 h-64 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500&q=80" alt="Reception Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-sm border border-white dark:border-slate-800 h-64 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80" alt="Medicine Section" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-20 max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-100 dark:border-slate-700/50">
+            <div class="text-center space-y-3 mb-8">
+                <h2 class="text-2xl sm:text-3xl font-bold">Book an Appointment</h2>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Fill your profile and preferred time slot for quick confirmation updates.</p>
+            </div>
+            <form id="appointment-form" class="space-y-5">
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-500">Full Name</label>
+                        <input type="text" required class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-teal-600 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-500">Phone Number</label>
+                        <input type="tel" required class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-teal-600 transition-colors">
+                    </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-500">Age</label>
+                        <input type="number" required class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-teal-600 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-500">Preferred Date</label>
+                        <input type="date" required class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-teal-600 transition-colors">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-500">Problem Description</label>
+                    <textarea rows="4" required placeholder="Describe your health symptoms briefly..." class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-teal-600 transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+                    Confirm Appointment Book
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-100 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-5 space-y-6">
+                <h2 class="text-3xl font-bold tracking-tight">Visit Our Clinic</h2>
+                <div class="h-1 w-20 bg-teal-600 rounded"></div>
+                
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <div class="text-teal-600 mt-1"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sm mb-1">Clinic Location Address</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Shop No. 2, 289, Near Hello Point, Bhawarkua, Indrapuri Colony, Indore, Madhya Pradesh 452001</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="text-teal-600"><i data-lucide="phone" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sm mb-1">Contact Support Numbers</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">+91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <a href="tel:+919876543210" class="bg-white dark:bg-slate-800 text-xs font-bold px-4 py-3 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Support</a>
+                    <a href="https://maps.google.com" target="_blank" class="bg-teal-600 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-sm flex items-center gap-2"><i data-lucide="navigation" class="w-4 h-4"></i> Get Directions</a>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 h-80 rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.2742999557763!2d75.8675685!3d22.6994348!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x3962fcffa3a2f8b5%3A0x6b4fb6c6f66bd327!2sBhawarkuan%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" class="w-full h-full border-0 grayscale dark:invert" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-white justify-center sm:justify-start">
+                    <i data-lucide="heart-pulse" class="w-6 h-6 text-teal-500"></i>
+                    <span class="font-bold text-lg">Dharmishtha Homoeo</span>
+                </div>
+                <p class="text-xs leading-relaxed">Providing high-grade, entirely safe, and deep root structural healing since inception in Indore.</p>
+            </div>
+            <div>
+                <h4 class="text-white text-sm font-bold mb-4">Quick Links</h4>
+                <ul class="text-xs space-y-2.5">
+                    <li><a href="#home" class="hover:text-white transition-colors">Home Landing</a></li>
+                    <li><a href="#about" class="hover:text-white transition-colors">About Story</a></li>
+                    <li><a href="#treatments" class="hover:text-white transition-colors">Treatments Catalog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white text-sm font-bold mb-4">Treatment Services</h4>
+                <ul class="text-xs space-y-2.5">
+                    <li><a href="#treatments" class="hover:text-white transition-colors">Skin Care</a></li>
+                    <li><a href="#treatments" class="hover:text-white transition-colors">Allergy Relief</a></li>
+                    <li><a href="#treatments" class="hover:text-white transition-colors">Chronic Illness</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white text-sm font-bold mb-4">Working Timings</h4>
+                <p class="text-xs">Emergency Care: 24 Hours Open / 7 Days</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs mt-12 pt-6 border-t border-slate-800">
+            <p>&copy; 2026 Dharmishtha Homoeo Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Responsive Mobile Menu Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Closing drawer context selection handles
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Advanced Dark / Light Configuration Theme Management
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        // Form submission simulated state triggers
+        document.getElementById('appointment-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your appointment request has been simulated and successfully submitted. We will contact you shortly.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
